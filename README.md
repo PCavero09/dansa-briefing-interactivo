@@ -148,11 +148,9 @@ Al completar este briefing, tendrás:
 
 ### 📞 Contacto y Soporte
 
-**Desarrollado por**: Director de Estrategia de Marca y Marketing B2B
-**Experiencia**: 18+ años en turismo de lujo latinoamericano
-**Especialidad**: Experiencias inmersivas de alta gama
-
-Para consultas sobre la herramienta o metodología, contactar a través de los canales oficiales de DanSa.
+**Desarrollado por**: Paolo Cavero, Practicante de Marketing
+Corporación E. Wong
+10/07/2025
 
 ### 📄 Licencia
 
