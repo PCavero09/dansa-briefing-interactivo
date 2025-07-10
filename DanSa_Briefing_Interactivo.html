@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Briefing Programa de Mano - DanSa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 2cm;
+            color: #000;
+            background-color: #fff;
+        }
+        
+        h1 {
+            color: #000;
+            text-align: center;
+            border-bottom: 3px solid #8B0000;
+            padding-bottom: 15px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        
+        h2 {
+            color: #000;
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        
+        h3 {
+            color: #fff;
+            background-color: #8B0000;
+            padding: 12px;
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: 25px;
+            border-radius: 5px;
+        }
+        
+        .intro {
+            background-color: #8B0000;
+            color: #fff;
+            padding: 18px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+        
+        .context-box {
+            background-color: #8B0000;
+            color: #fff;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            border-radius: 5px;
+        }
+        
+        .question {
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .example {
+            background-color: #8B0000;
+            color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 12px;
+            font-style: italic;
+            border-radius: 3px;
+        }
+        
+        .answer-input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #8B0000;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            color: #000;
+            background-color: #f9f9f9;
+            resize: vertical;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+        
+        .answer-input:focus {
+            outline: none;
+            border-color: #A0522D;
+            background-color: #fff;
+        }
+        
+        .big-answer {
+            min-height: 80px;
+        }
+        
+        .small-answer {
+            min-height: 40px;
+        }
+        
+        .section-divider {
+            border-top: 2px solid #8B0000;
+            margin: 30px 0;
+        }
+        
+        .final-note {
+            background-color: #8B0000;
+            color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 25px;
+            font-size: 13px;
+        }
+        
+        .footer {
+            text-align: center;
+            color: #000;
+            margin-top: 30px;
+            font-size: 12px;
+            font-style: italic;
+        }
+        
+        .known-info {
+            background-color: #8B0000;
+            color: #fff;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 12px;
+            border-radius: 3px;
+        }
+        
+        .simple-fill {
+            border: none;
+            border-bottom: 2px solid #8B0000;
+            background: transparent;
+            min-width: 300px;
+            padding: 2px 5px;
+            font-size: 13px;
+            color: #000;
+            font-family: Arial, sans-serif;
+        }
+        
+        .simple-fill:focus {
+            outline: none;
+            border-bottom: 2px solid #A0522D;
+            background-color: #f9f9f9;
+        }
+        
+        .dance-item {
+            margin-bottom: 15px;
+        }
+        
+        .plato-item {
+            margin-bottom: 10px;
+        }
+        
+        .action-buttons {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .btn {
+            background-color: #8B0000;
+            color: #fff;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            margin: 0 10px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .btn:hover {
+            background-color: #A0522D;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 5px;
+            background-color: #ddd;
+            border-radius: 3px;
+            margin-bottom: 20px;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background-color: #8B0000;
+            border-radius: 3px;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        @media print {
+            .action-buttons, .progress-bar { display: none; }
+            body { margin: 1cm; }
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar">
+        <div class="progress-fill" id="progressBar"></div>
+    </div>
+
+    <h1>BRIEFING - PROGRAMA DE MANO</h1>
+    <h2>DanSa - "Danzas y Sabores del Perú"</h2>
+    
+    <div class="intro">
+        <p><strong>¿Qué vamos a crear?</strong> Un programa elegante que los clientes reciban al entrar. Les explicará qué van a ver y comer esta noche.</p>
+        <p><strong>Instrucciones:</strong> Responder con palabras simples. Si no sabe algo, escribe "No sé" o "Por definir".</p>
+    </div>
+
+    <div class="context-box">
+        <strong>Ya sabemos que:</strong> DanSa presenta "Yanuq: La magia de Teresa". Es la historia de una joven que busca una receta perdida de su familia, viajando por todo el Perú. El menú tiene 6 platos y 3 tragos.
+    </div>
+
+    <form id="briefingForm">
+        <h3>1. LA HISTORIA QUE CONTAMOS</h3>
+        
+        <p class="question">¿Cómo explicamos la historia de Teresa a los clientes?</p>
+        <div class="example">Ejemplo: "Una joven que busca los secretos culinarios de su abuelo"</div>
+        <textarea class="answer-input big-answer" name="historia_teresa" placeholder="Escriba aquí la explicación de la historia..."></textarea>
+
+        <p class="question">¿Qué mensaje queremos dar con esta historia?</p>
+        <div class="example">Ejemplo: "La importancia de preservar nuestras tradiciones"</div>
+        <textarea class="answer-input small-answer" name="mensaje_historia" placeholder="Escriba aquí el mensaje principal..."></textarea>
+
+        <div class="section-divider"></div>
+
+        <h3>2. NUESTRAS DANZAS</h3>
+        
+        <div class="known-info">
+            <strong>Confirmado:</strong> Presentamos huayno, marinera, morenada, danza de las tijeras y danzas amazónicas.
+        </div>
+        
+        <p class="question">Para cada danza, escribe UNA frase simple que explique qué representa:</p>
+        
+        <div class="dance-item">
+            <p><strong>Huayno:</strong> <input type="text" class="simple-fill" name="huayno" placeholder="Danza alegre de los Andes"></p>
+        </div>
+        
+        <div class="dance-item">
+            <p><strong>Marinera:</strong> <input type="text" class="simple-fill" name="marinera" placeholder="Baile elegante de la costa peruana"></p>
+        </div>
+        
+        <div class="dance-item">
+            <p><strong>Morenada:</strong> <input type="text" class="simple-fill" name="morenada" placeholder="Danza tradicional con trajes coloridos"></p>
+        </div>
+        
+        <div class="dance-item">
+            <p><strong>Danza de las tijeras:</strong> <input type="text" class="simple-fill" name="tijeras" placeholder="Baile mágico de los Andes con acrobacias"></p>
+        </div>
+        
+        <div class="dance-item">
+            <p><strong>Danzas amazónicas:</strong> <input type="text" class="simple-fill" name="amazonicas" placeholder="Bailes de la selva que conectan con la naturaleza"></p>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <h3>3. NUESTROS PLATOS</h3>
+        
+        <div class="known-info">
+            <strong>Confirmado:</strong> 6 platos: conchas de abanico, ceviche de lenguado, rocoto relleno, arroz con pato, costillar de cordero, postre de cacao.
+        </div>
+        
+        <p class="question">¿Cómo llamamos exactamente a cada plato en nuestro menú?</p>
+        <div class="example">Ejemplo: ¿Se llama "Ceviche de Lenguado"?</div>
+        
+        <div class="plato-item">
+            <p><strong>Plato 1:</strong> <input type="text" class="simple-fill" name="plato1" placeholder="Nombre exacto del primer plato"></p>
+        </div>
+        <div class="plato-item">
+            <p><strong>Plato 2:</strong> <input type="text" class="simple-fill" name="plato2" placeholder="Nombre exacto del segundo plato"></p>
+        </div>
+        <div class="plato-item">
+            <p><strong>Plato 3:</strong> <input type="text" class="simple-fill" name="plato3" placeholder="Nombre exacto del tercer plato"></p>
+        </div>
+        <div class="plato-item">
+            <p><strong>Plato 4:</strong> <input type="text" class="simple-fill" name="plato4" placeholder="Nombre exacto del cuarto plato"></p>
+        </div>
+        <div class="plato-item">
+            <p><strong>Plato 5:</strong> <input type="text" class="simple-fill" name="plato5" placeholder="Nombre exacto del quinto plato"></p>
+        </div>
+        <div class="plato-item">
+            <p><strong>Plato 6:</strong> <input type="text" class="simple-fill" name="plato6" placeholder="Nombre exacto del sexto plato"></p>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <h3>4. NUESTROS TRAGOS ESPECIALES</h3>
+        
+        <div class="known-info">
+            <strong>Confirmado:</strong> "Sara" (con chicha de jora), "El dorado" (de la selva), "Flora" (con pisco y coca).
+        </div>
+        
+        <p class="question">¿Por qué se llaman así nuestros tragos?</p>
+        
+        <div class="dance-item">
+            <p><strong>"Sara":</strong> <input type="text" class="simple-fill" name="sara" placeholder="Por la diosa del maíz"></p>
+        </div>
+        
+        <div class="dance-item">
+            <p><strong>"El dorado":</strong> <input type="text" class="simple-fill" name="eldorado" placeholder="Por la leyenda de El Dorado"></p>
+        </div>
+        
+        <div class="dance-item">
+            <p><strong>"Flora":</strong> <input type="text" class="simple-fill" name="flora" placeholder="Por las plantas del Perú"></p>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <h3>5. NUESTRA ASPIRACIÓN</h3>
+        
+        <div class="known-info">
+            <strong>Confirmado:</strong> DanSa quiere estar entre las mejores experiencias inmersivas de Latinoamérica.
+        </div>
+        
+        <p class="question">¿Cómo explicamos nuestro objetivo?</p>
+        <div class="example">Ejemplo: "Trabajamos cada día para ser reconocidos internacionalmente"</div>
+        <textarea class="answer-input small-answer" name="objetivo" placeholder="Describa cómo comunicamos nuestra aspiración..."></textarea>
+
+        <p class="question">¿Hemos recibido algún premio o reconocimiento? ¿Es importante para nosotros?</p>
+        <div class="example">Ejemplo: "Aún no, pero trabajamos para ello"</div>
+        <textarea class="answer-input small-answer" name="reconocimientos" placeholder="Describa reconocimientos actuales o aspiraciones..."></textarea>
+
+        <div class="section-divider"></div>
+
+        <h3>6. LO QUE NOS HACE ÚNICOS</h3>
+        
+        <p class="question">¿Qué hace diferente a DanSa de la competencia?</p>
+        <div class="example">Ejemplo: "Somos los únicos que combinan alta cocina con espectáculo cultural"</div>
+        <textarea class="answer-input big-answer" name="diferenciador" placeholder="Describa qué nos hace únicos frente a otros lugares..."></textarea>
+
+        <p class="question">¿Cuál es el mensaje principal que queremos dejar a nuestros clientes?</p>
+        <div class="example">Ejemplo: "El Perú tiene la cultura y gastronomía más rica del mundo"</div>
+        <textarea class="answer-input small-answer" name="mensaje_principal" placeholder="¿Qué queremos que recuerden nuestros clientes?"></textarea>
+
+        <p class="question">¿Hay alguna historia curiosa sobre cómo nació DanSa?</p>
+        <div class="example">Ejemplo: "Nació del sueño de unir las dos artes más bellas del Perú"</div>
+        <textarea class="answer-input small-answer" name="historia_dansa" placeholder="Cuente alguna anécdota sobre la creación de DanSa..."></textarea>
+
+    </form>
+
+    <div class="action-buttons">
+        <button class="btn" onclick="guardarProgreso()">💾 Guardar Progreso</button>
+        <button class="btn" onclick="verResumen()">📋 Ver Resumen</button>
+        <button class="btn" onclick="exportarPDF()">📄 Exportar PDF</button>
+        <button class="btn" onclick="limpiarFormulario()">🗑️ Limpiar Todo</button>
+    </div>
+
+    <div class="final-note">
+        <p><strong>¡Listo!</strong> Con estas respuestas crearemos un programa de mano que explique perfectamente la experiencia "DanSa: Danzas y Sabores del Perú".</p>
+    </div>
+
+    <div class="footer">
+        <p><em>Briefing interno - DanSa 2025</em></p>
+    </div>
+
+    <script>
+        // Actualizar barra de progreso
+        function actualizarProgreso() {
+            const campos = document.querySelectorAll('input, textarea');
+            let camposLlenos = 0;
+            
+            campos.forEach(campo => {
+                if (campo.value.trim() !== '') {
+                    camposLlenos++;
+                }
+            });
+            
+            const porcentaje = (camposLlenos / campos.length) * 100;
+            document.getElementById('progressBar').style.width = porcentaje + '%';
+        }
+
+        // Guardar automáticamente en localStorage
+        function guardarProgreso() {
+            const formData = new FormData(document.getElementById('briefingForm'));
+            const data = {};
+            
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+            
+            localStorage.setItem('briefingDanSa', JSON.stringify(data));
+            alert('✅ Progreso guardado exitosamente');
+        }
+
+        // Cargar datos guardados
+        function cargarProgreso() {
+            const savedData = localStorage.getItem('briefingDanSa');
+            if (savedData) {
+                const data = JSON.parse(savedData);
+                
+                for (let [key, value] of Object.entries(data)) {
+                    const campo = document.querySelector(`[name="${key}"]`);
+                    if (campo) {
+                        campo.value = value;
+                    }
+                }
+                actualizarProgreso();
+            }
+        }
+
+        // Ver resumen de respuestas
+        function verResumen() {
+            const formData = new FormData(document.getElementById('briefingForm'));
+            let resumen = '📋 RESUMEN DEL BRIEFING:\n\n';
+            
+            for (let [key, value] of formData.entries()) {
+                if (value.trim() !== '') {
+                    resumen += `${key.toUpperCase()}: ${value}\n\n`;
+                }
+            }
+            
+            alert(resumen || 'No hay respuestas completadas aún.');
+        }
+
+        // Exportar a PDF (simulado)
+        function exportarPDF() {
+            alert('📄 Función de exportación a PDF disponible en la versión completa.\n\nPor ahora puede usar: Ctrl+P → Guardar como PDF');
+            window.print();
+        }
+
+        // Limpiar formulario
+        function limpiarFormulario() {
+            if (confirm('¿Está seguro de que quiere borrar todas las respuestas?')) {
+                document.getElementById('briefingForm').reset();
+                localStorage.removeItem('briefingDanSa');
+                actualizarProgreso();
+                alert('🗑️ Formulario limpiado');
+            }
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            cargarProgreso();
+            
+            // Actualizar progreso en tiempo real
+            document.addEventListener('input', actualizarProgreso);
+            
+            // Guardar automáticamente cada 15 minutos
+            setInterval(guardarProgreso, 900000);
+        });
+    </script>
+</body>
+</html> 
